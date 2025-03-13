@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2 class="display-4">This is my web application!</h2>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name<td>
+                <td>Username<td>
+                <td>Email<td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var user in IndexModel.Users)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Username</td>
+                        <td>@user.Email</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
